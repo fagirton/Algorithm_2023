@@ -4,6 +4,8 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"strconv"
+	"strings"
 )
 
 func Summ() {
@@ -12,5 +14,12 @@ func Summ() {
 	if err != nil {
 		panic(err)
 	}
-	fmt.Println("You entered:", line)
+	line = strings.TrimSuffix(line, "\n")
+	line = strings.TrimSuffix(line, "\r")
+	arr := strings.Split(line, " ")
+
+	a, _ := strconv.Atoi(arr[0])
+	b, _ := strconv.Atoi(arr[1])
+	summ := a + b
+	fmt.Println(summ)
 }
