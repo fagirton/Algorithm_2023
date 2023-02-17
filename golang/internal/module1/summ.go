@@ -1,4 +1,4 @@
-package internal
+package module1
 
 import (
 	"bufio"

@@ -3,10 +3,10 @@ package main
 import (
 	"fmt"
 
-	"isuct.ru/informatics2022/internal"
+	"isuct.ru/informatics2022/internal/module1"
 )
 
 func main() {
 	fmt.Println("Hello world")
-	internal.Summ()
+	module1.Summ()
 }
