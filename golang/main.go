@@ -3,11 +3,10 @@ package main
 import (
 	"fmt"
 
-	"isuct.ru/informatics2022/internal/module3"
+	"isuct.ru/informatics2022/internal/module4"
 )
 
 func main() {
 	fmt.Println("Hello world")
-	//module2.RadixSort()
-	module3.MainLoopShift()
+	var a module4.Stack = []string{}
 }
