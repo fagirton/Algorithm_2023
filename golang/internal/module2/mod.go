@@ -27,7 +27,9 @@ func Merge(a []SortItem, b []SortItem) []SortItem {
 			j++
 		}
 	}
-	fmt.Println(c[len(c)-1].index, c[0].index, c[0].value, c[len(c)-1].value)
+	if len(c) > 0 {
+		fmt.Println(c[0].index, c[len(c)-1].index, c[0].value, c[len(c)-1].value)
+	}
 	return c
 }
 
@@ -35,7 +37,7 @@ func Merge_sort(v []SortItem) []SortItem {
 	if len(v) <= 1 {
 		return v
 	}
-	left := Merge_sort(v[:len(v)/2])
+	left := Merge_sort(v[0 : len(v)/2])
 	right := Merge_sort(v[len(v)/2:])
 	return Merge(left, right)
 }

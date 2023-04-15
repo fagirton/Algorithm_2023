@@ -1,15 +1,17 @@
 package module4
 
-import "errors"
+import (
+	"errors"
+)
 
-type Stack []interface{}
+type Stack []string
 
 func (s *Stack) IsEmpty() bool {
 	return len(*s) == 0
 }
 
-func (s *Stack) Push(a interface{}) []interface{} {
-	return append(*s, a)
+func (s *Stack) Push(a string) {
+	*s = append(*s, a)
 }
 
 func (s *Stack) Pop() error {
@@ -32,12 +34,12 @@ func (s *Stack) Last() interface{} {
 
 func PSPcheck(s string) int {
 	var st Stack
-	st.Push(s[0])
+	st.Push(string(s[0]))
 	for i := 1; i < len(s); i++ {
 		if string(s[i]) == ")" && st.Last() == "(" {
 			st.Pop()
 		} else {
-			st.Push(s[i])
+			st.Push(string(s[i]))
 		}
 	}
 	return len(st)

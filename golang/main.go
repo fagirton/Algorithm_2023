@@ -1,12 +1,13 @@
 package main
 
 import (
-	"fmt"
-
-	"isuct.ru/informatics2022/internal/module4"
+	"isuct.ru/informatics2022/internal/module2"
 )
 
 func main() {
-	fmt.Println("Hello world")
-	var a module4.Stack = []string{}
+	// scanner := bufio.NewScanner(os.Stdin)
+	// scanner.Scan()
+	// str := scanner.Text()
+	// fmt.Println(module4.PSPcheck(str))
+	module2.Merging()
 }
