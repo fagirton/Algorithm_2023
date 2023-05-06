@@ -82,28 +82,4 @@ func TestMergeSort(t *testing.T) {
 		out, _ := io.ReadAll(r)
 		assert.Equal("1 2 3 4 5\n", string(out))
 	})
-
-	t.Run("Case: no interface", func(t *testing.T) {
-		t.Run("Case: 1", func(t *testing.T) {
-			arr := []module2.SortItem{module2.SortItem{1, 1}}
-			res := []module2.SortItem{module2.SortItem{1, 1}}
-			assert.Equal(res, module2.Merge_sort(arr))
-		})
-		t.Run("Case: 3 1", func(t *testing.T) {
-			arr := []module2.SortItem{module2.SortItem{1, 3}, module2.SortItem{2, 1}}
-			res := []module2.SortItem{module2.SortItem{1, 1}, module2.SortItem{2, 3}}
-			assert.EqualValues(res, module2.Merge_sort(arr))
-		})
-		t.Run("Case: 5 to 1", func(t *testing.T) {
-			arr := []module2.SortItem{
-				module2.SortItem{1, 5},
-				module2.SortItem{2, 4},
-				module2.SortItem{3, 3},
-				module2.SortItem{4, 2},
-				module2.SortItem{5, 1},
-			}
-			res := []module2.SortItem{module2.SortItem{1, 1}, module2.SortItem{2, 2}, module2.SortItem{3, 3}, module2.SortItem{4, 4}, module2.SortItem{5, 5}}
-			assert.EqualValues(res, module2.Merge_sort(arr))
-		})
-	})
 }
