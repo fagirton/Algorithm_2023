@@ -3,7 +3,9 @@ package main
 import (
 	// "fmt"
 
-	"isuct.ru/informatics2022/internal/module4"
+	"fmt"
+
+	"isuct.ru/informatics2022/internal/module5"
 )
 
 func main() {
@@ -25,5 +27,12 @@ func main() {
 	// 	arr = append(arr, a)
 	// }
 	// module4.MinWindowsLol(arr, arr0[1])
-	module4.Nearest_Lowest()
+
+	tree := module5.NewTree(*module5.NewNode(3))
+	tree.Insert(5)
+	tree.Insert(2)
+	tree.Insert(1)
+	fmt.Println(tree.GetElements())
+	fmt.Println(tree.Find(5))
+	fmt.Println(tree.Find(0))
 }
